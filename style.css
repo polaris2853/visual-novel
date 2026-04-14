@@ -1,0 +1,124 @@
+﻿/* Import font mềm mại */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+:root {
+	--ponds-pink: #ffe4e9;
+	--accent-pink: #ffb3c1;
+	--deep-rose: #fb6f92;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	font-family: 'Quicksand', sans-serif;
+	overflow: hidden;
+}
+
+#vn-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* Background mờ ảo */
+#background {
+	position: absolute;
+	width: 110%;
+	height: 110%;
+	top: -5%;
+	left: -5%;
+	background-size: cover;
+	background-position: center;
+	filter: blur(5px) brightness(0.9);
+	transition: background-image 1.2s ease-in-out;
+}
+
+#pink-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, rgba(255,228,233,0.4) 0%, rgba(255,255,255,0.2) 100%);
+	z-index: 1;
+}
+
+/* Khung ảnh Polaroid "Trắng Hồng" */
+#photo-display-container {
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	perspective: 1000px;
+}
+
+.polaroid-frame {
+	background: white;
+	padding: 15px 15px 40px 15px;
+	box-shadow: 0 15px 35px rgba(251, 111, 146, 0.2);
+	border-radius: 2px;
+	transform: rotate(-3deg);
+	transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#memory-photo {
+	width: auto;
+	height: 400px;
+	object-fit: cover;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+	#memory-photo.show {
+		opacity: 1;
+	}
+
+/* Hộp thoại Glassmorphism Hồng Nhạt */
+#dialogue-box {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	max-width: 700px;
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(10px);
+	border: 1px solid var(--ponds-pink);
+	border-radius: 20px;
+	padding: 25px;
+	cursor: pointer;
+	z-index: 10;
+	box-shadow: 0 10px 25px rgba(255, 179, 193, 0.3);
+}
+
+#speaker-name {
+	color: var(--deep-rose);
+	font-weight: 600;
+	font-size: 1.2rem;
+	margin-bottom: 8px;
+}
+
+#text-content {
+	color: #555;
+	font-size: 1.05rem;
+	line-height: 1.6;
+}
+
+/* Progress bar */
+#progress-container {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 5px;
+	background: rgba(255,255,255,0.5);
+	z-index: 100;
+}
+
+#progress-bar {
+	height: 100%;
+	background: var(--accent-pink);
+	width: 0%;
+	transition: width 0.4s;
+}

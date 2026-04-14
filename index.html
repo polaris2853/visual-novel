@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kỷ Niệm</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="vn-container">
+		<div id="pink-overlay"></div>
+		<div id="background"></div>
+
+		<div class="particles-container"></div>
+
+		<div id="photo-display-container">
+			<div class="polaroid-frame">
+				<img id="memory-photo" src="" alt="Kỷ niệm">
+			</div>
+		</div>
+
+		<div id="dialogue-box" onclick="game.next()">
+			<div id="speaker-name"></div>
+			<div id="text-content"></div>
+			<div id="click-hint">Chạm để lật trang...</div>
+		</div>
+
+		<div id="progress-container">
+			<div id="progress-bar"></div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
