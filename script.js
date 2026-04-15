@@ -90,7 +90,7 @@ class VisualNovel {
 				photoEl.classList.add('show');
 				document.querySelector('.polaroid-frame').style.transform = `rotate(${Math.random() * 6 - 3}deg) translateY(0)`;
 			}
-		}, 50);
+		}, 20);
 
 		this.typeWriter(node.text);
 		this.updateProgress();
