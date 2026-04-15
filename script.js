@@ -2,7 +2,7 @@
 	{
 		speaker: "Khởi đầu",
 		text: "Mọi chuyện bắt đầu từ những gương mặt lạ lẫm này, khi chúng ta bước vào một hành trình mới mang tên 'Cấp ba'.",
-		bg: "assets/img/soft_bg.jpg", photo: "./assets/memories/IMG_8397.JPG"
+		bg: "assets/img/soft_bg.jpg", photo: "./assets/memories/IMG_6442.JPG"
 	},
 	{
 		speaker: "Gặp gỡ",
