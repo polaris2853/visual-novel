@@ -215,6 +215,8 @@ body, html {
 	object-fit: cover;
 	opacity: 0;
 	transition: opacity 0.5s;
+	image-rendering: -webkit-optimize-contrast;
+	will-change: opacity, transform;
 }
 
 	#memory-photo.show {

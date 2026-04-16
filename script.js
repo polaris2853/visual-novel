@@ -125,12 +125,13 @@ class VisualNovel {
 		photoEl.classList.remove('show');
 		setTimeout(() => {
 			if (node.photo) {
+				photoEl.src = "";
 				photoEl.src = node.photo;
 				photoEl.classList.add('show');
 				// Chỉnh góc xoay ngẫu nhiên cho vibe Polaroid
 				document.querySelector('.polaroid-frame').style.transform = `rotate(${Math.random() * 6 - 3}deg)`;
 			}
-		}, 50);
+		}, 300);
 
 		this.typeWriter(node.text);
 		this.updateProgress();
