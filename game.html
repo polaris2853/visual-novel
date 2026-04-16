@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành Trình Kỷ Niệm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="top-nav">
+        <div class="nav-left" onclick="window.location.href='index.html'">HOME</div>
+        <div class="nav-right" onclick="game.toggleCatalog()">CATALOG</div>
+    </nav>
+
+    <div id="catalog-overlay" class="hidden">
+        <div class="catalog-content">
+            <h2 class="vn-subtitle" style="font-size: 27px; color: #fb6f92;">Mục Lục Ký Ức</h2>
+            <div id="catalog-grid"></div>
+            <button class="close-catalog" onclick="game.toggleCatalog()">Đóng</button>
+        </div>
+    </div>
+
+    <div id="vn-container">
+        <div id="pink-overlay"></div>
+        <div id="background"></div>
+        <div class="particles-container"></div>
+
+        <div id="photo-display-container">
+            <div class="polaroid-frame">
+                <img id="memory-photo" src="" alt="Kỷ niệm">
+            </div>
+        </div>
+
+        <div id="dialogue-box">
+            <div id="speaker-name"></div>
+            <div id="text-content"></div>
+            <div class="nav-controls">
+                <button class="nav-btn btn-back" onclick="event.stopPropagation(); game.prev()">
+                    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
+                </button>
+                <button class="nav-btn btn-next" onclick="event.stopPropagation(); game.next()">
+                    <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
