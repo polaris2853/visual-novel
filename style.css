@@ -17,9 +17,57 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 9999; /* Luôn nằm trên cùng */
+	z-index: -1; /* Luôn nằm trên cùng */
 	transition: opacity 1s ease-out;
 }
+
+#main-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.2); /* Trong suốt nhẹ */
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(251, 111, 146, 0.1);
+    font-family: 'Quicksand', sans-serif;
+    color: #555;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.copyright {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #fb6f92; /* Màu hồng đặc trưng của bạn */
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: #ffb3c1;
+    text-shadow: 0 0 10px rgba(251, 111, 146, 0.4);
+}
+
+.contact-info {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
 
 .title-group {
 	text-align: center;
